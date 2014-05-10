@@ -6,7 +6,7 @@ hpc <- read.table("household_power_consumption.txt",
                     "household_power_consumption.txt",
                     nrow = 1, header = TRUE, sep=";")))
 
-# Create histogram of global active power
+# Plot of Global active power versus time
 hpc$datetime <- strptime(paste(hpc$Date, hpc$Time), "%d/%m/%Y %H:%M:%S")
 png(file="plot2.png", width=480, height=480, bg="transparent")
 plot(hpc$datetime, hpc$Global_active_power, type="l", xlab="", ylab = "Global Active Power (kilowatts)")

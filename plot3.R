@@ -6,7 +6,7 @@ hpc <- read.table("household_power_consumption.txt",
                     "household_power_consumption.txt",
                     nrow = 1, header = TRUE, sep=";")))
 
-# Create histogram of global active power
+# Plot of sub metering levels (1, 2 or 3) vs time
 hpc$datetime <- strptime(paste(hpc$Date, hpc$Time), "%d/%m/%Y %H:%M:%S")
 png(file="plot3.png", width=480, height=480, bg="transparent")
 with(hpc, {
